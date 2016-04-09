@@ -1,0 +1,78 @@
+_repo: The-Kreutzer-Sonata-and-Other-Stories_689
+_version: 0.0.1
+contributor:
+  translator:
+    agent_name: Tucker, Benjamin Ricketson
+    alias: Tucker, Benjamin R.
+    birthdate: 1854
+    deathdate: 1939
+    gutenberg_agent_id: '6683'
+    url: http://www.gutenberg.org/2009/agents/6683
+creator:
+  author:
+    agent_name: Tolstoy, Leo, graf
+    aliases:
+    - Толстой, Лев Николаевич
+    - Tolstoï, Léon
+    - Tolstoy, Lev N.
+    - Tolstoi, Leo
+    birthdate: 1828
+    deathdate: 1910
+    gutenberg_agent_id: '136'
+    url: http://www.gutenberg.org/2009/agents/136
+    wikipedia: http://en.wikipedia.org/wiki/Leo_Tolstoy
+description: "The Kreutzer Sonata (Russian: Крейцерова соната, Kreitzerova Sonata)\
+  \ is a novella by Leo Tolstoy, named after Beethoven's Kreutzer Sonata. The novella\
+  \ was published in 1889, and was promptly censored by the Russian authorities. The\
+  \ work is an argument for the ideal of sexual abstinence and an in-depth first-person\
+  \ description of jealous rage. The main character, Pozdnyshev, relates the events\
+  \ leading up to his killing his wife; in his analysis, the root cause for the deed\
+  \ were the \"animal excesses\" and \"swinish connection\" governing the relation\
+  \ between the sexes.\n From Wikipedia (CC BY-SA)."
+gutenberg_bookshelf:
+- Anarchism
+- Harvard Classics
+- Banned Books from Anne Haight's list
+gutenberg_issued: '2006-03-18'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '689'
+  wikidata: Q1214091
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Short stories'
+- !lcsh 'Tolstoy, Leo, graf, 1828-1910 -- Translations into English'
+- !lcsh 'Russia -- Social life and customs -- Fiction'
+- !lcc 'PG'
+- GITenberg
+tableOfContents: The Kreutzer Sonata — Ivan the Fool — A Lost Opportunity — Polikushka
+  — The Candle
+title: The Kreutzer Sonata and Other Stories
+url: http://www.gutenberg.org/ebooks/689
+wikipedia:
+- https://ru.wikisource.org/wiki/%D0%9A%D1%80%D0%B5%D0%B9%D1%86%D0%B5%D1%80%D0%BE%D0%B2%D0%B0_%D1%81%D0%BE%D0%BD%D0%B0%D1%82%D0%B0_(%D0%A2%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B9)
+- https://commons.wikimedia.org/wiki/Category:The_Kreutzer_Sonata_(Tolstoy)
+- https://uk.wikipedia.org/wiki/%D0%9A%D1%80%D0%B5%D0%B9%D1%86%D0%B5%D1%80%D0%BE%D0%B2%D0%B0_%D1%81%D0%BE%D0%BD%D0%B0%D1%82%D0%B0_(%D0%BF%D0%BE%D0%B2%D1%96%D1%81%D1%82%D1%8C)
+- https://fr.wikisource.org/wiki/La_Sonate_%C3%A0_Kreutzer
+- https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%82%A4%E3%83%84%E3%82%A7%E3%83%AB%E3%83%BB%E3%82%BD%E3%83%8A%E3%82%BF_(%E5%B0%8F%E8%AA%AC)
+- https://pt.wikipedia.org/wiki/A_Sonata_a_Kreutzer
+- https://es.wikipedia.org/wiki/La_sonata_a_Kreutzer
+- https://en.wikipedia.org/wiki/The_Kreutzer_Sonata
+- https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%B5%D0%B9%D1%86%D0%B5%D1%80%D0%BE%D0%B2%D0%B0_%D1%81%D0%BE%D0%BD%D0%B0%D1%82%D0%B0_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)
+- https://ro.wikipedia.org/wiki/Sonata_Kreutzer
+- https://fr.wikipedia.org/wiki/La_Sonate_%C3%A0_Kreutzer
+- https://sh.wikipedia.org/wiki/Krejcerova_sonata_(Tolstoj)
+- https://pl.wikipedia.org/wiki/Sonata_Kreutzerowska
+- https://da.wikipedia.org/wiki/Kreutzersonaten
+- https://ru.wikiquote.org/wiki/%D0%9A%D1%80%D0%B5%D0%B9%D1%86%D0%B5%D1%80%D0%BE%D0%B2%D0%B0_%D1%81%D0%BE%D0%BD%D0%B0%D1%82%D0%B0_(%D0%BF%D0%BE%D0%B2%D0%B5%D1%81%D1%82%D1%8C)
+- https://nl.wikipedia.org/wiki/De_Kreutzersonate
+- https://cs.wikipedia.org/wiki/Kreutzerova_son%C3%A1ta
+- https://de.wikipedia.org/wiki/Die_Kreutzersonate
+- https://ml.wikipedia.org/wiki/%E0%B4%95%E0%B5%8D%E0%B4%B0%E0%B5%8A%E0%B4%AF%E0%B4%BF%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B5%8D%E0%B4%B8%E0%B5%BC_%E0%B4%B8%E0%B5%8A%E0%B4%A8%E0%B4%BE%E0%B4%B1%E0%B5%8D%E0%B4%B1%E0%B4%BE
+- https://it.wikipedia.org/wiki/Sonata_a_Kreutzer_(romanzo)
+- https://ca.wikipedia.org/wiki/Sonata_a_Kreutzer_(Tolstoi)
+- https://tr.wikipedia.org/wiki/Kroy%C3%A7er_Sonat
+- https://he.wikipedia.org/wiki/%D7%A1%D7%95%D7%A0%D7%98%D7%AA_%D7%A7%D7%A8%D7%95%D7%99%D7%A6%D7%A8
