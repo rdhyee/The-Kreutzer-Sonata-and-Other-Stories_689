@@ -1,0 +1,59 @@
+sudo: required
+dist: trusty
+language: ruby
+
+before_install:
+- gem install asciidoctor -v 1.5.2 
+- gem install tilt
+- sudo pip install git+https://github.com/rdhyee/ebooklib.git
+script:
+- VERSION=`ruby -e "require 'yaml'; meta = YAML.load_file('metadata.yaml'); puts meta['_version'];"`
+- git clone https://github.com/gitenberg-dev/asciidoctor-htmlbook.git
+
+- sudo pip install -r asciidoctor-htmlbook/gitberg-machine/requirements.txt
+- asciidoctor -a toc,idprefix=xx_,version=$VERSION -b xhtml5 -T ./asciidoctor-htmlbook/htmlbook-autogen/
+  -d book book.asciidoc -o book.html
+- git clone https://github.com/gitenberg-dev/HTMLBook
+
+# make book.html available to jinja2 environment by putting it into templates
+- cp book.html asciidoctor-htmlbook/gitberg-machine/templates/
+
+- /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
+- xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
+- cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
+# look for first images directory and one found, copy over to ./OEBPS
+- find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
+- zip -rX book.epub mimetype
+- zip -rX book.epub OEBPS/ META-INF/
+- if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
+- mv book.epub The-Kreutzer-Sonata-and-Other-Stories.epub
+- ebook-convert The-Kreutzer-Sonata-and-Other-Stories.epub The-Kreutzer-Sonata-and-Other-Stories.mobi
+- xvfb-run ebook-convert The-Kreutzer-Sonata-and-Other-Stories.epub The-Kreutzer-Sonata-and-Other-Stories.pdf
+branches:
+  only:
+  - master
+notifications:
+  webhooks:
+    urls:
+      - https://unglue.it/api/travisci/webhook
+    on_success: always
+    on_failure: never
+    on_start: never
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: qsII5b+Up28n0sdqN0yql9qBaPq9wvCKJvYgY78xwXKuA5Aki815sozTKytD5miSY0dTenSFjdBQgEsuvhJwVKL3HxhT8pLHSLtNnSTeQACQ89Mu/ZYCZrX37yvaoit9lIN+BM2atJE1Hwk/wDpCygs1QIKCx64xMPM87f6EI+oU+hIbQhgP+c17Ev7DP/0b3LIkEwU7HChaA5NQDKTx3l7QWrdcvpbBi1NPQ6CeK4Ft7Q6ii9ByVo5Q0D8lwIAxudNbTOaqzLTCxyZB9w3lJ/Z7U4Whc0l4K+r3HizOSuTvSaJM7WHLiY5L707umGoIjOiCinzY60RLF7L0dZPNUqnIkBP/eynmPRKiosvYgm88Mm/xG9Uqy83rlstB3EHiL3JK7TR4jcNQ60/LEXQ5Tfo7i90K77yZPuFoPFktPvWug276JtqDHeoLEhoEJgt1hxgYqrVrjFGfUbngXbfhmH8lvRkJEGv0c8bq1orOl3MeIfdy6O6APmQ18p57hL9sY5NUB2hQzooWHdz9XkoD3viLtJqadfq8vtRjGku1kxS2U8ZnRiTFFGD6OcnMg6jTDcdvG0Qh0iRoNpjJyQUVwLQui9+X7WqDD0YOOu/QxJQloe30V8lLhBCyxzzBH0sVsYVIhXT9c5ciHgAY1F1hMGgwgv9zhcfoi6NQx9KV9k4=
+  file:
+    - The-Kreutzer-Sonata-and-Other-Stories.epub
+    - The-Kreutzer-Sonata-and-Other-Stories.mobi
+    - The-Kreutzer-Sonata-and-Other-Stories.pdf
+  "on":
+    repo: GITenberg/The-Kreutzer-Sonata-and-Other-Stories_689
+addons:
+  apt:
+    packages:
+    - xsltproc
+    - xvfb
+    - calibre
